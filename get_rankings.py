@@ -41,9 +41,13 @@ class PvpBot:
         with open(f'./data/{self.cp_cap}_{self.cup_type}_{self.role}.json', 'w') as file:
             json.dump(response.json(), file, indent=4)
 
-cp_cap, cup_type, role = get_inputs()
-Bot = PvpBot(cp_cap, cup_type, role)
-search_url = Bot.build_url()
-print(search_url)
-response = Bot.get_response(search_url)
-Bot.save_response(response)
+def main():
+    cp_cap, cup_type, role = get_inputs()
+    Bot = PvpBot(cp_cap, cup_type, role)
+    search_url = Bot.build_url()
+    print(search_url)
+    response = Bot.get_response(search_url)
+    Bot.save_response(response)
+
+if __name__ == "main":
+    main()
