@@ -45,7 +45,6 @@ def main():
     cp_cap, cup_type, role = get_inputs()
     Bot = PvpBot(cp_cap, cup_type, role)
     search_url = Bot.build_url()
-    print(search_url)
     response = Bot.get_response(search_url)
     Bot.save_response(response)
 
