@@ -49,5 +49,5 @@ def main():
     response = Bot.get_response(search_url)
     Bot.save_response(response)
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()
